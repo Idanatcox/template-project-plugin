@@ -5,7 +5,6 @@ import hudson.Launcher;
 import hudson.matrix.MatrixProject;
 import hudson.model.AbstractBuild;
 import hudson.model.AbstractProject;
-import hudson.model.Action;
 import hudson.model.BuildListener;
 import hudson.model.DependecyDeclarer;
 import hudson.model.DependencyGraph;
@@ -16,12 +15,9 @@ import hudson.security.AccessControlled;
 import hudson.tasks.BuildStepDescriptor;
 import hudson.tasks.Builder;
 import hudson.tasks.Messages;
-import hudson.tasks.Publisher;
 import hudson.util.FormValidation;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -116,13 +112,4 @@ public class ProxyBuilder extends Builder implements DependecyDeclarer {
 		return true;
 	}
 
-	@Override
-	public Collection<? extends Action> getProjectActions(AbstractProject<?, ?> project) {
-		List<Action> actions = new ArrayList<Action>();
-		for (Builder builder : getProjectBuilders()) {
-			actions.addAll(builder.getProjectActions(project));
-		}
-		return actions;
-	}
-	
 }
