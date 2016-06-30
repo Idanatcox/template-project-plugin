@@ -3,11 +3,11 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>1.420</version>
+    <version>1.580.1</version>
   </parent>
   
   <artifactId>template-project</artifactId>
-  <version>1.4.2</version>
+  <version>1.4.2-Cox</version>
   <packaging>hpi</packaging>
   <name>Template Project plugin</name>
   <url>http://wiki.jenkins-ci.org/display/JENKINS/Template+Project+Plugin</url>
@@ -41,6 +41,12 @@
     <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
+    </dependency>
+	<dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>matrix-project</artifactId>
+      <version>1.4</version>
+      <optional>true</optional>
     </dependency>
   </dependencies>
   <scm>

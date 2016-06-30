@@ -14,6 +14,7 @@ import hudson.model.Project;
 import hudson.security.AccessControlled;
 import hudson.tasks.BuildStepDescriptor;
 import hudson.tasks.Builder;
+import hudson.tasks.Publisher;
 import hudson.tasks.Messages;
 import hudson.util.FormValidation;
 
